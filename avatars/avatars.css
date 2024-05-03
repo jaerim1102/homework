@@ -1,0 +1,52 @@
+*{
+   max-width: 825px;
+}
+main img{
+   width: 64px;
+   height: 64px;
+   padding: 20px;
+   border-radius: 50%;
+}
+.group1{
+   display: flex;
+   float:left;
+}
+.group2{
+   display: flex;
+   float: left;
+}
+.offline{
+   width: 15px;
+   height: 15px;
+   background-color: #DBDBDB;
+   border: 1px solid white;
+   border-radius: 50%;
+   position: absolute;
+   margin-top: 70px;
+   margin-left: 67px;
+}
+.online{
+   width: 15px;
+   height: 15px;
+   background-color: #4CFE88;
+   border: 1px solid white;
+   border-radius: 50%;
+   position: absolute;
+   margin-top: 70px;
+   margin-left: 67px;
+}
+@supports(display: flex){
+   .group {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .group1{
+      display: flex;
+      order: 2;
+   }
+   .group2{
+      display: flex;
+      order: 1;
+   }
+}
