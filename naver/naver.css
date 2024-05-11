@@ -1,0 +1,197 @@
+@import "./reset.css";
+
+* {
+   color: #181818;
+   font-size: 1rem;
+}
+
+main {
+   margin-top: 10rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   img {
+      width: 230px;
+   }
+
+   form {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      input {
+         width: 100%;
+         height: 45px;
+         box-sizing: border-box;
+         border: 1px solid #dadada;
+         margin-top: 1.25rem;
+         padding-left: 1.25rem;
+      }
+
+      .login {
+         width: 100%;
+         height: 45px;
+         border: none;
+         color: #fff;
+         background-color: #03cf5d;
+         margin-top: 1.25rem;
+      }
+   }
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+button[class="login"]:focus {
+   outline: 1px solid #03cf5d;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+   background-color: #e9f0fd;
+
+}
+
+section {
+   width: 500px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 0.625rem;
+
+
+   input[type="radio"],
+   input[type="checkbox"]{
+      position: absolute;
+      appearance: none;
+      /* border: 1px solid darkblue; */
+    }
+    input[type="checkbox"]{
+      width: 25px;
+      height: 25px;
+      margin-top: -8px;
+      margin-left: -3px;
+    }
+    input[type="radio"]{
+      width: 28px;
+      height: 24px;
+      margin-top: -8px;
+      margin-left: 5px;
+    }
+
+
+   .check {
+      align-items: center;
+      float: left;
+
+      label {
+         padding-left: 30px;
+         padding-top: 5px;
+         height: 24px;
+      }
+
+      input {
+         margin-right: 0.313rem;
+         padding-left: 30px;
+      }
+
+      input+label {
+         background-size: 24px;
+         background-repeat: no-repeat;
+         background-image: url('icons/unchecked.svg');
+      }
+
+      input:checked+label {
+         background-size: 24px;
+         background-repeat: no-repeat;
+         background-image: url('icons/checked.svg');
+      }
+   }
+
+   .ip {
+      a{
+         text-decoration: none;         
+      }
+      label {
+         padding-left: 5px;
+      }
+
+      #off {
+         color: gray;
+      }
+
+      #on{
+         color: #03cf5d;
+      }
+   }
+}
+
+.toggle-input {
+   position: absolute;
+   opacity: 0;
+}
+
+/* off 상태 스타일 */
+#off {
+   display: inline-block;
+}
+
+#on {
+   display: none;
+}
+
+/* on 상태 스타일 */
+.toggle-input:checked + #off {
+   display: none;
+}
+
+.toggle-input:checked + #off + #on {
+   display: inline-block;
+}
+
+.toggle-input:focus-visible + #off {
+   outline: 1px solid #24388d;
+   display: none;
+}
+
+.toggle-input:focus-visible + #off + #on {
+   outline: 1px solid #24388d;
+   display: inline-block;
+}
+
+
+input[type="checkbox"]:focus-visible{
+   outline: 1px solid #24388d;
+}
+
+input[type="radio"]:focus-visible{
+   outline: none;
+}
+
+a:focus-visible{
+   outline: 1px solid #24388d;
+}
+
+/* 반응형 */
+@media (max-width: 767px) {
+   form {
+      width: calc(100% - 20px);
+   }
+
+   section {
+      width: calc(100% - 20px);
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   .ip {
+      display: none;
+   }
+}
+
+@media (min-width: 768px) {
+   form {
+      width: 500px;
+   }
+}

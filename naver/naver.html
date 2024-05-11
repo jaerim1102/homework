@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="naver.css">
+   <title>네이버</title>
+</head>
+
+<body>
+   <main>
+      <img src="icons/logo.svg" alt="네이버 로고 이미지">
+      <form action="/" class="form1">
+         <input type="email" id="email" placeholder="아이디(이메일)" alt="이메일 입력">
+         <input type="password" id="password" placeholder="비밀번호" alt="비밀번호 입력">
+         <button class="login">로그인</button>
+      </form>
+      <section>
+         <div class="check">
+            <input type="checkbox" id="check">
+            <label for="check">로그인 상태 유지</label>
+         </div>
+         <div class="ip">
+            <a href="ip_security.html">IP 보안</a>
+            <input type="radio" id="ip" class="toggle-input" onclick="location.href='ip_security.html'">
+            <label for="ip" class="toggle-label" id="off">OFF</label>
+            <label for="ip" class="toggle-label" id="on">ON</label>
+         </div>
+      </section>
+   </main>
+</body>
+
+</html>
