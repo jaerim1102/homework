@@ -173,6 +173,8 @@ a:focus-visible{
    outline: 1px solid #24388d;
 }
 
+
+
 /* 반응형 */
 @media (max-width: 767px) {
    form {
