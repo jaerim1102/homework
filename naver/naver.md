@@ -67,7 +67,7 @@ position: absolute; 속성 때문에 클릭 범위가 늘어난 것을
          background-image: url('icons/unchecked.svg');
       }
 
-      input:checked+label {
+input:checked+label {
          background-size: 24px;
          background-repeat: no-repeat;
          background-image: url('icons/checked.svg');
