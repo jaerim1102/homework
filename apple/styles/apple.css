@@ -1,0 +1,54 @@
+@import url(base.css);
+@import url(theme.css);
+@import url(reset.css);
+
+/* 카드 레이아웃 */
+
+section{
+   height: var(--size);
+   background-repeat: no-repeat;
+}
+
+.gird1{
+   background-image: url(../products/ipad_pro.jpeg);
+}
+.gird2{
+   background-image: url(../products/ipad_air.jpeg );
+}
+.gird3{
+   background-image: url(../products/iphone15_pro.jpeg);
+}
+.gird4{
+   background-image: url(../products/iphone15.jpeg);
+}
+.gird5{
+   background-image: url(../products/apple_watch.jpeg);
+}
+.gird6{
+   background-image: url(../products/macbook_air.jpeg);
+}
+.gird7{
+   background-image: url(../products/airpods_pro.jpeg);
+}
+
+h1{
+   font-size: var(--extra-large-text);
+}
+
+h2{
+   font-size: var(--medium-text);
+}
+
+.next{
+   font-size: var(--small-text);
+}
+
+button{
+   font-size: var(--x-small-text);
+}
+
+
+.grid-container{
+   display: grid;
+}
+ 
