@@ -26,7 +26,7 @@ input type = radio에 on, off 두개의 label을 주어 toggle로 on/off를 작�
       justify-content: flex-end;
       로 로그인 상태 유지 요소가 왼쪽에 배치되도록 함
 
-      .ip는 모바일 상태에서는 보이지 않도록 display: none; 사용
+.ip는 모바일 상태에서는 보이지 않도록 display: none; 사용
 
 <!-- focus -->
 input[type="email"]:focus,
@@ -48,30 +48,30 @@ input[type="password"]:focus {
 않는 문제가 있었음.
 
 
-   input[type="radio"],
+input[type="radio"],
    input[type="checkbox"]{
       position: absolute;
       appearance: none;
     }
 
-    때문에 appearance: none;로 요소를 숨김 처리함
+때문에 appearance: none;로 요소를 숨김 처리함
 
-    position: absolute; 속성 때문에 클릭 범위가 늘어난 것을
+position: absolute; 속성 때문에 클릭 범위가 늘어난 것을
     width, height, margin 값을 활용해 조정함
 
 
-    .check를 클릭하면 이미지가 변경되어야 했기 때문에
+.check를 클릭하면 이미지가 변경되어야 했기 때문에
       input+label {
          background-size: 24px;
          background-repeat: no-repeat;
          background-image: url('icons/unchecked.svg');
       }
 
-      input:checked+label {
+input:checked+label {
          background-size: 24px;
          background-repeat: no-repeat;
          background-image: url('icons/checked.svg');
       }
       를 사용해 input과 label을 체크하면 bg 이미지가 변경되도록 구현함
 
-      .onOff를 구현하기 위해 off를 체크하면 숨겨져있는 on label이 보이도록 구현함
+.onOff를 구현하기 위해 off를 체크하면 숨겨져있는 on label이 보이도록 구현함
