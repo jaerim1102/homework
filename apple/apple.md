@@ -1,7 +1,7 @@
 # apple 제품 카드
 
 ## 1. 반응형 구현 결과
-
+<img src="./apple.gif"></img>
 
 ## 2. 마크업
 div로 모든 section을 감싸고 grid 효과를 줄 수 있도록 grid-container라는 class를 부여했습니다.
