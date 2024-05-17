@@ -4,51 +4,129 @@
 
 /* 카드 레이아웃 */
 
-section{
+section {
+   padding-top: var(--extra-large-spacing);
+   text-align: center;
    height: var(--size);
    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
 }
 
-.gird1{
-   background-image: url(../products/ipad_pro.jpeg);
-}
-.gird2{
-   background-image: url(../products/ipad_air.jpeg );
-}
-.gird3{
-   background-image: url(../products/iphone15_pro.jpeg);
-}
-.gird4{
-   background-image: url(../products/iphone15.jpeg);
-}
-.gird5{
-   background-image: url(../products/apple_watch.jpeg);
-}
-.gird6{
-   background-image: url(../products/macbook_air.jpeg);
-}
-.gird7{
-   background-image: url(../products/airpods_pro.jpeg);
-}
-
-h1{
-   font-size: var(--extra-large-text);
-}
-
-h2{
-   font-size: var(--medium-text);
-}
-
-.next{
-   font-size: var(--small-text);
-}
-
-button{
-   font-size: var(--x-small-text);
-}
-
-
-.grid-container{
+.grid-container {
    display: grid;
+   grid-template-columns: repeat(2, 1fr);
 }
- 
+
+.grid1 {
+   grid-column: span 2;
+   background-image: image-set(url('../products/ipad_pro.jpeg') 1x, url('../products/ipad_pro_2x.jpeg') 2x);
+
+   color: var(--white);
+}
+
+.grid2 {
+   grid-column: span 2;
+   background-image: image-set(url('../products/ipad_air.jpeg') 1x, url('../products/ipad_air_2x.jpeg') 2x);
+}
+
+.grid3 {
+   grid-column: span 2;
+   background-image: image-set(url('../products/iphone15_pro.jpeg') 1x, url('../products/iphone15_pro_2x.jpeg') 2x);
+
+   color: var(--white);
+}
+
+.grid4 {
+   grid-column: span 1;
+   background-image: image-set(url('../products/iphone15.jpeg') 1x, url('../products/iphone15_2x.jpeg') 2x);
+}
+
+.grid5 {
+   grid-column: span 1;
+   background-image: image-set(url('../products/apple_watch.jpeg') 1x, url('../products/apple_watch_2x.jpeg') 2x);
+
+   color: var(--white);
+}
+
+.grid6 {
+   grid-column: span 1;
+   background-image: image-set(url('../products/macbook_air.jpeg') 1x, url('../products/macbook_air_2x.jpeg') 2x);
+}
+
+.grid7 {
+   grid-column: span 1;
+   background-image: image-set(url('../products/airpods_pro.jpeg') 1x, url('../products/airpods_pro_2x.jpeg') 2x);
+
+   color: var(--white);
+}
+
+h1 {
+   font-size: var(--extra-large-text);
+   font-weight: bold;
+   margin-bottom: var(--small-spacing);
+}
+
+h2 {
+   font-size: var(--medium-text);
+   margin-bottom: var(--small-spacing);
+   line-height: var(--line-normal);
+}
+
+.next {
+   font-size: var(--small-text);
+   margin-bottom: var(--x-small-spacing);
+}
+
+button {
+   border-radius: 50px;
+   padding: var(--x-small-spacing);
+   font-size: var(--x-small-text);
+   margin-left: var(--x-small-spacing);
+}
+
+.moreA{
+   border: none;
+   background-color: var(--blue-100);
+   color: var(--white);
+}
+
+.moreB{
+   border: none;
+   background-color: var(--black);
+   color: var(--white);
+}
+
+.priceA{
+   border: 1px solid var(--blue-100);
+   background-color: transparent;
+   color: var(--blue-100);
+}
+.priceB{
+   border: 1px solid var(--black);
+   background-color: transparent;
+   color: var(--black);
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+   section{
+      padding-top: var(--large-spacing);
+   }
+
+   .grid4 {
+      grid-column: span 2;
+   }
+
+   .grid5 {
+      grid-column: span 2;
+   }
+
+   .grid6 {
+      grid-column: span 2;
+   }
+
+   .grid7 {
+      grid-column: span 2;
+   }
+}
